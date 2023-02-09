@@ -1,6 +1,20 @@
-console.log("testing index.js webpack");
+import { createToDo } from './create-to-do.js';
+import { blankProjectLoad } from './blank-project-load.js';
+import { displayDefaultProject, displayTheForm, addItemToCheckList, clearForm} from './dom-manip.js';
+import './style.css';
 
-const contentDiv = document.querySelector(".content");
-const testH1 = document.createElement("h1");
-testH1.textContent = "HELLO WORLD ...TEST FROM WEBPACK INDEX.JS DOM MANIP";
-contentDiv.appendChild(testH1);
+blankProjectLoad();
+
+let clickEventsModule = (function() {
+    const addNewToDo = document.querySelector(".add-todo-button");
+    addNewToDo.addEventListener("click", displayTheForm);
+
+    const addToChecklist = document.querySelector(".add-to-checklist");
+    addToChecklist.addEventListener("click", addItemToCheckList);
+
+    const clearButton = document.querySelector(".reset-button");
+    clearButton.addEventListener("click", clearForm);
+}) ();
+
+
+
