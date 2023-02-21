@@ -16,7 +16,7 @@
         </div>
         <div class="form">
             <button class="add-todo-button">Add new ToDo</button>
-            <div id="add-todo-form" style="display: none">
+            <div id="add-todo-form" style="display:none">
                 <form id="add-todo">
                     <label for="Project">Project:</label>
                     <select id="Project", name="Project">
@@ -24,11 +24,11 @@
                     <option value="Create-New-Project">Create New Project</option>
                     </select>
                     <label for="Title">Title:</label>
-                    <input type="text" id="Title" name="Title">
+                    <input type="text" id="Title" name="Title" placeholder="Require Field" require>
                     <label for="Description">Description:</label>
-                    <input type="text" id="Description" name="Description">
+                    <input type="text" id="Description" name="Description" placeholder="Require Field" require>
                     <label for="DueDate">Due Date:</label>
-                    <input type="date" id="DueDate" name="DueDate">
+                    <input type="date" id="DueDate" name="DueDate" placeholder="Require Field" require>
                     <label for="Priority">Priority:</label>
                     <select id="Priority", name="Priority">
                         <option value="Low">Low</option>
@@ -45,7 +45,7 @@
                 <button type="reset" class="reset-button">Reset Form</button>
             </div>
         </div>
-        <div class="books"></div>
+        <div class="projects"></div>
     </div>    
     <script src="main.js"></script>
 </body>

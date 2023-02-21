@@ -27,7 +27,21 @@ export const createToDo = () => {
         for (let i = 0; i < nodeListCheckList.length; i++) {
             
             let strippedCheckList = nodeListCheckList[i].textContent.replace("\u00D7", '');
-
+            CheckListArray.push(strippedCheckList);
         }
+
+        let checkList = CheckListAray.join(", ");
+
+        console.log("Called createToDo module...creating todo now");
+        console.log({ Title, Decription, DueDate, Priority, checkList });
+        console.log("Pushing this object to the toDoArray....");
+
+        toDoArray.push({ Title, Description, DueDate, Priority, checkList });
+    
+        console.log(toDoArray);
+
+        clearForm();
+
+        return { Title, Description, DueDate, Priority, checkList };
 }
     
