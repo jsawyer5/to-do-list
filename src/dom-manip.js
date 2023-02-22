@@ -48,6 +48,36 @@ export function clearForm() {
     document.getElementById("add-todo").reset();
 }
 
+export function displayToDo() {
+    const removeDivs = documnt.querySelectorAll(".card");
+    console.log("show me the node count of current DOM card divs....", removeDivs);
+    for (let i = 0; i < removeDivs.length; i++) {
+        removeDivs[i].remove();
+    }
+
+
+console.log("display to screen");
+const projects = document.querySelector(".projects");
+const card = document.createElement("div");
+card.classList.add("card");
+projects.appendChild(card);
+
+let Title = localStorage.getItem("Title");
+let Description = localStorage.getItem("Description");
+let DueDate = localStorage.getItem("DueDate");
+let Priority = localStorage.getItem("Priority");
+let CheckList = localStorage.getItem("CheckList");
+
+let _displayArray = {Title, Description, DueDate, Priority, CheckList};
+console.log( displayArray);
+
+for (let key in _displayArray) {
+    console.log(`${key}: ${ _displayArray[key]}`);
+    const para = document.createElement("p");
+    para.textContent = (`${key}: ${ _displayArray[key]}`);
+    card.appendChild(para);
+    }
+}
 
 
 

@@ -1,5 +1,6 @@
 import { compareAsc, format, parseISO, startOfToday } from 'date-fns';
 import { clearForm } from './dom-manip';
+import { saveToDoLocal } from './manage-local-storage.js'
 
 let toDoArray = [];
 
@@ -30,18 +31,20 @@ export const createToDo = () => {
             CheckListArray.push(strippedCheckList);
         }
 
-        let checkList = CheckListAray.join(", ");
+        let CheckList = CheckListArray.join(", ");
 
         console.log("Called createToDo module...creating todo now");
-        console.log({ Title, Decription, DueDate, Priority, checkList });
+        console.log({ Title, Decription, DueDate, Priority, CheckList });
         console.log("Pushing this object to the toDoArray....");
 
-        toDoArray.push({ Title, Description, DueDate, Priority, checkList });
+        toDoArray.push({ Title, Description, DueDate, Priority, CheckList });
     
         console.log(toDoArray);
 
+        saveToDoToLocal({ Title, Description, DueDate, Priority, CheckList});
+
         clearForm();
 
-        return { Title, Description, DueDate, Priority, checkList };
+        return { Title, Description, DueDate, Priority, CheckList };
 }
     
