@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo List</title>
+    <title>ToDo List WebApp</title>
 </head>
 <body>
     <div class="content">
@@ -12,23 +12,24 @@
             <h1>Add New ToDo To Project</h1>
         </div>
         <div class="todos-heading">
-            <h1>Current ToDos' In Projects</h1>
+            <h1>Current ToDos' In Projects'</h1>
         </div>
         <div class="form">
-            <button class="add-todo-button">Add new ToDo</button>
+            <button class="add-todo-button">Add New ToDo</button>
             <div id="add-todo-form" style="display:none">
                 <form id="add-todo">
-                    <label for="Project">Project:</label>
+                    <!--TODO:  Build out and refactor project to include this feature at a later date-->
+                    <!-- <label for="Project">Project:</label>
                     <select id="Project", name="Project">
                     <option value="DefaultProject">Default Project</option>
                     <option value="Create-New-Project">Create New Project</option>
-                    </select>
+                    </select> -->
                     <label for="Title">Title:</label>
-                    <input type="text" id="Title" name="Title" placeholder="Require Field" require>
+                    <input type="text" id="Title" name="Title" placeholder="Required Field" required>
                     <label for="Description">Description:</label>
-                    <input type="text" id="Description" name="Description" placeholder="Require Field" require>
+                    <input type="text" id="Description" name="Description" placeholder="Required Field" required>
                     <label for="DueDate">Due Date:</label>
-                    <input type="date" id="DueDate" name="DueDate" placeholder="Require Field" require>
+                    <input type="date" id="DueDate" name="DueDate" placeholder="Required Field" required>
                     <label for="Priority">Priority:</label>
                     <select id="Priority", name="Priority">
                         <option value="Low">Low</option>
@@ -38,15 +39,15 @@
                     <label for="CheckList">CheckList Items Added (if any):</label>
                     <ul class="todo-ul"></ul>
                 </form>
-                <input type="text" id="add-to-checklist" name="add-to-checklist" placeholder="Type checklist item">
+                <input type="text" id="add-to-checklist" name="add-to-checklist" placeholder="Type checklist item here">
                 <button class="add-to-checklist">Add Item To Checklist</button>
                 <br>
                 <button type="submit" class="submit-button">Submit ToDo</button>
                 <button type="reset" class="reset-button">Reset Form</button>
             </div>
         </div>
-        <div class="projects"></div>
-    </div>    
+        <div class="projects"></div> 
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
